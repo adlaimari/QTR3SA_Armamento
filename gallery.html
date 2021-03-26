@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Rainbow Center</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" type="image/x-icon" href="css/images/rainbow.ico">
+<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="all">
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/jquery.flexslider-min.js"></script>
+<script src="js/functions.js"></script>
+
+</head>
+<body>
+<div id="wrapper">
+  <header>
+    <div class="shell">
+      <h1 id="logo"><a href="index_armamento.html">Rainbow Center</a></h1>
+      <nav id="navigation">
+        <a href="index_armamento.html">Home</a> 
+        <a href="#about">About</a> 
+        <div class="dropdown">
+      <a href="services.html">Services</a>
+          <div class="dropdown-content">
+            <a href="services.html#AP">Advocacy Programs</a>
+            <a href="services.html#ECE">Entertainment and Cultural Events</a>
+            <a href="services.html#HWP">Health and Wellness Programs</a>
+          </div>
+      </div>
+        <a href="gallery.html" class="active">Gallery</a> 
+      </nav>
+    </div>
+  </header>
+  <section class="slider-section">
+  </section
+>  <div class="main">
+    <div class="shell">
+      <div class="heading"> <span class="ico"></span>
+        <h2>Gallery</h2>
+        <h3>To showcase art made by the LGBT community.</h3>
+      </div>
+      <section class="cols">
+        <div class="col">
+          <a href="#">
+          <h4>Pride Heart</h4>
+          <img src="css/images/gallery-img1.jpg" alt=""></a>
+        </div>
+        <div class="col">
+          <a href="#">
+          <h4>Pride</h4>
+          <img src="css/images/gallery-img2.jpg" alt=""></a>
+        </div>
+        <div class="col">
+          <a href="#">
+          <h4>Lesbian Sunset Pride</h4>
+          <img src="css/images/gallery-img3.jpg" alt=""></a>
+        </div>
+        <div class="col">
+          <a href="#">
+          <h4>Non-binary and Bisexual Solidarity Plushies</h4>
+          <img src="css/images/gallery-img4.jpg" alt=""></a>
+        </div>
+        <div id="LargerImage"></div>
+        <div id="Overlay"></div>
+        <div class="cl">&nbsp;</div>
+      </section>
+      <section class="cols">
+        <div class="col" style="width: 400px;">
+          <h3>NEWSLETTER</h3>
+          <br>
+          <form>
+            <h4>First Name</h4>
+            <input type="text" name="firstname">
+            <h4>Last Name</h4>
+            <input type="text" name="firstname">
+            <h4>Email Name</h4>
+            <input type="text" name="firstname">
+            <br><h2>&nbsp;</h2>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+        <div class="col" style="width: 400px;">
+          <h3>CONTACT US</h3>
+          <br>
+          <h4><p>+639991234567</p></h4>
+          <h4><p>+639123456789</p></h4>
+          <br>&nbsp;
+          <h3>E-MAIL ADDRESS</h3>
+          <br>
+          <h4><p>RainbowCenter@rainbow.com</p></h4>
+        </div>
+      </section>
+      <div class="cl">&nbsp;</div>
+    </div>
+  </div>
+  <div id="footer-push"></div>
+</div>
+<div id="footer">
+  <div class="shell">
+    <div class="footer-top">
+      <nav class="footer-nav"> <a href="index_armamento.html">Home</a> <a href="#about">About</a> <a href="services.html">Services</a> 
+        <a href="gallery.html">Gallery</a></nav>
+    </div>
+    <div class="copy">
+      <p>Copyright 2021 - Rainbow Center - All right reserved.</p>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+$('a img').click(function () {
+    var $img = $(this);
+    $('#LargerImage').html($img.clone().height(750).width(750)).add($('#Overlay')).fadeIn();
+});
+
+$('#LargerImage').add($('#Overlay')).click(function () {
+    $('#LargerImage').add($('#Overlay')).fadeOut(function () {
+        $('#LargerImage').empty();
+    });
+});
+    
+
+</script>
+</body>
+</html>

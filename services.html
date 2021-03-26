@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Rainbow Center</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" type="image/x-icon" href="css/images/rainbow.ico">
+<link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="all">
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/jquery.flexslider-min.js"></script>
+<script src="js/functions.js"></script>
+</head>
+
+<body>
+<div id="wrapper">
+  <header>
+    <div class="shell">
+      <h1 id="logo"><a href="index_armamento.html">Rainbow Center</a></h1>
+      <nav id="navigation">
+      	<a href="index_armamento.html">Home</a> 
+      	<a href="index_armamento.html#about">About</a> 
+      	<div class="dropdown">
+			<a href="services.html"  class="active">Services</a>
+  		    <div class="dropdown-content">
+            <a href="#AP">Advocacy Programs</a>
+            <a href="#ECE">Entertainment and Cultural Events</a>
+            <a href="#HWP">Health and Wellness Programs</a>
+          </div>
+  		</div>
+        <a href="gallery.html">Gallery</a> 
+      </nav>
+    </div>
+  </header>
+  <section class="slider-section">
+  </section>
+
+  <div class="main">
+    <div class="shell">
+      <div class="heading" id="about"> <span class="ico"></span>
+        <h2>Our Services</h2>
+        <h3>We offer advocacy, health and wellness programs, entertainment and cultural events.</h3>
+      </div>
+      <section class="content">
+        <a type="button" onclick="show('AP','APB')"><h4>Advocacy<img src="css/images/show.png" id="APB"></h4></a>
+        <div class="box" id="AP">
+          <p>The Rainbow Center is a place for LGBT community organizing and innovation, a key to a progressive social change and will provide critical services for the community. We will provide seminars and programs that will help create leaders for the community. Together we fight for:</p>
+          <ul>
+            <li>Equity and Inclusion for Transgender & Gender Nonconforming to the Society</li>
+            <li>LGBT Visibility & Affirmation</li>
+            <li>Justice</li>
+          </ul>
+        </div>
+        &nbsp;
+      </section>
+      <section class="content">
+        <a type="button" onclick="show('ECE', 'ECEB')"><h4>Entertainment and Cultural Events <img src="css/images/hide.png" id="ECEB"></h4></a>
+        <div class="box" id="ECE">
+          <p>The Rainbow Center will be a cultural center for the LGBT community, a place to showcase original work by artist of the LGBT community and will offer a wide variety of arts and entertainment facilities like:</p>
+          <ul>
+            <li>Annual Events to celebrate Pride for being who you are.</li>
+            <li>Venue for events</li>
+            <li>Sports facilities i.e. badminton courts or basketball courts</li>
+          </ul>
+        </div>
+        &nbsp;
+      </section>
+      <section class="content">
+        <a type="button" onclick="show('HWP', 'HWPB')"><h4>Health and Wellness Programs <img src="css/images/hide.png" id="HWPB"></h4></a>
+        <div class="box" id="HWP">
+          <p>The Rainbow Center will be a safe haven for the members of the LGBT community that is suffering from abuse and discrimination. We will provide programs designed for the LGBT community to help these members to address problems like:</p>
+          <ul>
+            <li>Substance or Alcohol addiction</li>
+            <li>Depression and Anxiety</li>
+          </ul>
+        </div>
+        &nbsp;
+      </section>
+      <section class="cols">
+        <div class="col" style="width: 400px;">
+          <h3>NEWSLETTER</h3>
+          <br>
+          <form>
+            <h4>First Name</h4>
+            <input type="text" name="firstname">
+            <h4>Last Name</h4>
+            <input type="text" name="firstname">
+            <h4>Email Name</h4>
+            <input type="text" name="firstname">
+            <br><h2>&nbsp;</h2>
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+        <div class="col" style="width: 400px;">
+          <h3>CONTACT US</h3>
+          <br>
+          <h4><p>+639991234567</p></h4>
+          <h4><p>+639123456789</p></h4>
+          <br>&nbsp;
+          <h3>E-MAIL ADDRESS</h3>
+          <br>
+          <h4><p>RainbowCenter@rainbow.com</p></h4>
+        </div>
+      </section>
+      <div class="cl">&nbsp;</div>
+    </div>
+  </div>
+  <div id="footer-push"></div>
+</div>
+<div id="footer">
+  <div class="shell">
+    <div class="footer-top">
+      <nav class="footer-nav"> <a href="index_armamento.html">Home</a> <a href="#about">About</a> <a href="services.html">Services</a> 
+        <a href="gallery.html">Gallery</a> </nav>
+    </div>
+    <div class="copy">
+      <p>Copyright 2021 - Rainbow Center - All right reserved.</p>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  $(document).ready(function() {
+    if (window.location.href.indexOf("ECE") > -1) {
+        document.getElementById('AP').style.display="none";
+        document.getElementById('APB').src = "css/images/hide.png";
+        document.getElementById('ECE').style.display="block";
+        document.getElementById('ECEB').src = "css/images/show.png";
+        document.getElementById('HWP').style.display="none";
+        document.getElementById('HWPB').src = "css/images/hide.png";
+    }else if (window.location.href.indexOf("HWP") > -1) {
+        document.getElementById('AP').style.display="none";
+        document.getElementById('APB').src = "css/images/hide.png";
+        document.getElementById('ECE').style.display="none";
+        document.getElementById('ECEB').src = "css/images/hide.png";
+        document.getElementById('HWP').style.display="block";
+        document.getElementById('HWPB').src = "css/images/show.png";
+    }else{
+        document.getElementById('AP').style.display="block";
+        document.getElementById('APB').src = "css/images/show.png";
+        document.getElementById('ECE').style.display="none";
+        document.getElementById('ECEB').src = "css/images/hide.png";
+        document.getElementById('HWP').style.display="none";
+        document.getElementById('HWPB').src = "css/images/hide.png";
+    }
+  });
+
+function show(div_id,img_id) {
+
+  document.getElementById('AP').style.display="none";
+  document.getElementById('APB').src = "css/images/hide.png";
+  document.getElementById('ECE').style.display="none";
+  document.getElementById('ECEB').src = "css/images/hide.png";
+  document.getElementById('HWP').style.display="none";
+  document.getElementById('HWPB').src = "css/images/hide.png";
+  var x = document.getElementById(div_id);
+  var y = document.getElementById(img_id);
+  if (x.style.display === "none") {
+   x.style.display = "block";
+   y.src = "css/images/show.png";
+  } else {
+  x.style.display = "none";
+   y.src = "css/images/hide.png";
+  }
+}
+</script>
+</body>
+</html>
